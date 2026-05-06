@@ -2,19 +2,336 @@
 
 {% set pageName="Home" %}
 
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+  <div class="govuk-width-container">
+    <h1 class="govuk-heading-l">
+      Message Centre Prototypee
     </h1>
-test
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+
+    <p class="govuk-body"> Messagee Centre is a secure, centralised hub for official benefit communications, located within Customer Account and is being designed and delivered by CCAMS. It will support channel shift from paper to digital and for MVP it will host Proof of Benefit communications, with additional communications added over time as the service expands.</p>  
+
+    <br>
+
+    <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Version 9 <strong class="govuk-tag govuk-tag--yellow"> WIP </strong>
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Design changes handover May 26
+          </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <p class="govuk-body"> Design changes, informed by E2E testing in April 26, for both Customer Account and Message Centre designs are captured in this prototype and were handed over to relevants BAs across both teams for ticketing and delivery on May 6th.​​</p>          
+          
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header app-custom-class">Screen</th>
+                <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+              </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">HTML message template</th>
+                <td class="govuk-table__cell"><a href=" " class="govuk-link">View design</a></td>
+              </tr>
+            </tbody>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Inbox</th>
+                <td class="govuk-table__cell"><a href=" " class="govuk-link">View design</a></td>
+              </tr>
+            </tbody>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Empty inbox</th>
+                <td class="govuk-table__cell"><a href=" " class="govuk-link">View design</a></td>
+              </tr>
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Version 8 <strong class="govuk-tag">Current</strong>
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            E2E testing April 26
+          </div>
+        </div>
+        <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+          <p class="govuk-body"> The purpose of this round of user research was to ​de‑risk the MVP handover​ and validate the usability of the flow from the Proof of Benefit into Message Centre so that users can be smoothly handed over from one service to another.​​</p>          
+          
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header app-custom-class">Scenario</th>
+                <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+              </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">HTML message template</th>
+                <td class="govuk-table__cell"><a href="E2E-testing/html-message-template" class="govuk-link">View scenario</a></td>
+              </tr>
+            </tbody>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Full E2E testing prototype</th>
+                <td class="govuk-table__cell"><a href="E2E-testing/research-set-up/intro" class="govuk-link">View scenario</a></td>
+              </tr>
+            </tbody>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Empty inbox</th>
+                <td class="govuk-table__cell"><a href="E2E-testing/inbox-empty" class="govuk-link">View scenario</a></td>
+              </tr>
+            </tbody>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">No PDF error scenario</th>
+                <td class="govuk-table__cell"><a href="E2E-testing/message-no-pdf" class="govuk-link">View scenario</a></td>
+              </tr>
+            </tbody>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">No html error scenario</th>
+                <td class="govuk-table__cell"><a href="E2E-testing/message-no-html" class="govuk-link">View scenario</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Version 7
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            MVP handover Feb 26
+          </div>
+        </div>
+        <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+          <p class="govuk-body">This HTML message template was handed over for MVP on the 20th February. It incorporates the learnings from discovery research and accessibility testing.</p>
+        
+          <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Design</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Link</th>
+                </tr>
+              </thead>
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Template</th>
+                  <td class="govuk-table__cell"><a href="html-handover/html-message-template" class="govuk-link">View design</a></td>
+                </tr>
+              </tbody>
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">PIP example</th>
+                  <td class="govuk-table__cell"><a href="html-handover/refined-letter-PIP" class="govuk-link">View design</a></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Version 6
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Accessibility testing Jan 26
+          </div>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+        <p class="govuk-body"> This research tested the accessibility and usability with six assistive technology users across desktop, tablet and mobile, focusing on inclusive interaction and content clarity.
+          We tested the inbox, accessible PDF download and the comparison of the build-feasible "baseline" HTML message template with the "refined", insight-led design.
+
+          <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header app-custom-class">Benefit line</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">UR scenario</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Baseline letter</th>
+                  <th scope="col" class="govuk-table__header app-custom-class">Refined letter</th>
+                </tr>
+              </thead>
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">PIP</th>
+                  <td class="govuk-table__cell"><a href="html-testing/PIP/POB-start.html" class="govuk-link">View scenario</a></td>
+                  <td class="govuk-table__cell"><a href="html-testing/PIP/baseline-letter.html" class="govuk-link">View baseline letter</a></td>
+                  <td class="govuk-table__cell"><a href="html-testing/PIP/refined-letter.html" class="govuk-link">View refined letter</a></td>
+                </tr>
+              </tbody>
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">ESA</th>
+                  <td class="govuk-table__cell"><a href="html-testing/ESA/POB-start.html" class="govuk-link">View scenario</a></td>
+                  <td class="govuk-table__cell"><a href="html-testing/ESA/baseline-letter.html" class="govuk-link">View baseline letter</a></td>
+                  <td class="govuk-table__cell"><a href="html-testing/ESA/refined-letter.html" class="govuk-link">View refined letter</a></td>
+                  <td class="govuk-table__cell"><a href=" " class="govuk-link"> </a></td>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+        </div>
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Version 5
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Design exploration Sept 25
+          </div>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+          <p class="govuk-body">These designs explore different solutions for adapting paper letters to the GOV.UK digital format, informed by discovery research.</p>
+          <p class="govuk-body">
+            <a href="/html-testing/exploration" class="govuk-link">View designs</a>
+          </p>
+        </div>
+        <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Version 4
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Technical MVP Aug 25
+          </div>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+          <p class="govuk-body">This design was created for technical MVP and the inbox view was handed over for dev build.</p>
+          <p class="govuk-body">
+            <a href="/notifications/technical-mvp/view-your-letters-and-messages" class="govuk-link">View design</a>
+          </p>
+        </div>
+
+        <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Version 3
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Round two UR May 25
+          </div>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+          <p class="govuk-body">These designs were taken into the second round of user testing which were usability testing sessions done remotely.</p>
+          <p class="govuk-body">
+            <a href="/notifications-draft/round-2" class="govuk-link">View designs</a>
+          </p>
+        </div>
+
+        <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Version 2
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Round one UR March 25
+          </div>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+          <p class="govuk-body">These designs were taken into the first round of user testing which were usability testing sessions done both in person and remotely.</p>
+          <p class="govuk-body">
+            <a href="/notifications-draft/round-1" class="govuk-link">View designs</a>
+          </p>
+        </div>
+
+        <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Version 1
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+            Initial ideation Jan-Feb 25
+          </div>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content">
+          <p class="govuk-body">These designs were the initial explorations of HTML message template.</p>
+          <p class="govuk-body">
+            <a href="/notifications-draft/ideation-menu" class="govuk-link">View initial ideation (Jan 25)</a>
+          </p>
+          <p class="govuk-body">
+            <a href="/notifications-draft/initial-designs" class="govuk-link">View early designs (Feb 25)</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h1 class="govuk-heading-l">
+        Related prototypes
+      </h1>
+      
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#">Citizen preference</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Evidence</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="https://customer-view.herokuapp.com/">Customer view</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="https://colleague-view.herokuapp.com/">Colleague view</a>
+        </li>
+      </ul>
+
   </div>
+
 </div>
 
 {% endblock %}

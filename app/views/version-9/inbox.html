@@ -1,0 +1,167 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+
+
+  {{ govukOneLoginServiceHeader({
+    homepageLink: "/index.html",
+    signOutLink: " ",
+    oneLoginLink: " ",
+    
+    serviceNavigationParams: { 
+      
+      serviceName: "View your letters messages",
+      navigationLabel: "inbox.html"
+      
+    }
+  }) }}
+
+
+{% endblock %}
+
+{% block pageTitle %}
+  View your letters and messages
+{% endblock %}
+
+{% block beforeContent %}
+  <ul class="dwp-language-toggle__list">
+    <li class="dwp-language-toggle__list-item" aria-current="true"> <span class="govuk-body-s"> English  </span></li>
+    <li class="dwp-language-toggle__list-item">    
+    <a href="#" hreflang="cy" lang="cy" rel="alternate" class="govuk-link--no-visited-state" aria-label="Newid yr iaith ir Gymraeg">Cymraeg</a>
+    </li>
+  </ul>
+{% endblock %}
+
+
+{% block content %}
+
+  <h1 class="govuk-heading-xl">View your letters and messages</h1>
+
+  <p class="govuk-body-l" id="unread-count">
+    You have 2 unread messages
+  </p>
+
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" style="padding-left:10px;">Status</th>
+        <th scope="col" class="govuk-table__header">Message</th>
+        <th scope="col" class="govuk-table__header" style="padding-right:10px;">Date</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body" id="table-body">
+
+        <tr class="govuk-table__row unread" data-id="pip-unread">
+          <td class="govuk-table__header" style="padding-left:10px;" data-status="unread">
+            <strong class="govuk-tag custom-unread-tag">Unread</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="message-pip" class="govuk-link message-link" data-id="pip-unread">
+              Personal Independence Payment (PIP)<br>
+              Proof of benefit
+            </a>
+          </td>
+          <td class="govuk-table__cell date-column" style="padding-right:10px;"></td>
+        </tr>
+    
+        <tr class="govuk-table__row unread" data-id="esa-unread">
+          <td class="govuk-table__header" style="padding-left:10px;" data-status="unread">
+            <strong class="govuk-tag custom-unread-tag">Unread</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a href="message-esa" class="govuk-link message-link" data-id="esa-unread">
+              Employment and Support Allowance (ESA)<br>
+              Proof of benefit
+            </a>
+          </td>
+          <td class="govuk-table__cell date-column" style="padding-right:10px;"></td>
+        </tr>
+  
+
+    
+    </tbody>
+  </table>
+
+  {{ govukButton({
+      text: "Go back to account home",
+      href: "account-home",
+      classes: "govuk-button"
+      }) }}
+
+  <style>
+    .govuk-service-navigation__wrapper {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 960px) {
+      .sidebar {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .leftside {
+        width: 100%;
+        margin-left: 40px;
+      }
+    }
+
+    .govuk-table__cell {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-weight: normal !important;
+    }
+
+    .govuk-table__header {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .govuk-table__row.unread {
+      background-color: #f3f2f1;
+    }
+
+    .govuk-table__row.read {
+      background-color: transparent;
+    }
+  </style>
+
+
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const navType = performance.getEntriesByType('navigation')[0]?.type;
+    if (navType === 'reload') {
+      localStorage.clear();
+    }
+
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+
+    const oldDate = new Date();
+    oldDate.setMonth(oldDate.getMonth() - 2);
+
+    const formattedOldDate = oldDate.toLocaleDateString('en-GB', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    });
+
+    document.querySelectorAll('.date-column').forEach(function (column) {
+      column.textContent = formattedDate;
+    });
+
+    document.querySelectorAll('.old-date-column').forEach(function (column) {
+      column.textContent = formattedOldDate;
+    });
+
+      });
+</script>
+
+
+
+{% endblock %}
+

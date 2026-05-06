@@ -1,0 +1,73 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+  {{ super() }}
+
+  <style>
+    .govuk-service-navigation__wrapper{
+        flex-grow: 1;
+    }
+</style>
+
+{% set navigationEnd %}
+  <li class="govuk-service-navigation__item" style="margin-left: auto;">
+    <a class="govuk-service-navigation__link" href="menu">Sign out</a>
+  </li>
+{% endset %}
+
+{{ govukServiceNavigation({
+  serviceName: "Manage your benefits and State Pension",
+    slots: {navigationEnd: navigationEnd}
+  }) }}
+{% endblock %}
+
+{% block pageTitle %}
+Account home
+{% endblock %}
+
+{% block beforeContent %}
+  <ul class="dwp-language-toggle__list">
+    <li class="dwp-language-toggle__list-item" aria-current="true"> <span class="govuk-body-s"> English  </span></li>
+    <li class="dwp-language-toggle__list-item">    
+    <a href="#" hreflang="cy" lang="cy" rel="alternate" class="govuk-link--no-visited-state" aria-label="Newid yr iaith ir Gymraeg">Cymraeg</a>
+    </li>
+  </ul>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">Account home</span>
+        <h1 class="govuk-heading-xl">
+            Sarah Phillips
+        </h1>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Payments</h2>
+        <p class="govuk-body"><a href=" " class="govuk-link--no-visited-state">Check your next payment</a></p>
+        <p class="govuk-body"><a href=" " class="govuk-link--no-visited-state">View your recent payments</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Personal details</h2>
+        <p class="govuk-body"><a href=" " class="govuk-link--no-visited-state">View your personal details</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Documents</h2>
+
+
+        <p><a type="submit" data-module="govuk-button" href="list-benefits-answer" class="govuk-link--no-visited-state">Get proof of your benefits</a></p>
+
+        <p class="govuk-body"><a href="{% if data.hasCompletedRequest %}inbox.html{% else %}inbox-empty.html{% endif %}" class="govuk-link--no-visited-state">View your letters and messages</a></p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+   
+    </div>
+</div>
+
+{% endblock %}

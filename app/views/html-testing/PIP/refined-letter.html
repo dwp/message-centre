@@ -1,0 +1,255 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Proof of benefit letter
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    serviceName: "View your letters and messages",
+    serviceUrl: " "
+    })}}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content" style="text-align: centre;">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        Discovery
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is not a service. These are example conceptual screens.
+      </span>
+    </p>
+  </div>
+
+  {{ govukBackLink({
+      text: "Back",
+      href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Personal Independence Payment (PIP)</span>
+      <h1 class="govuk-heading-xl">Your statement of entitlement</h1>
+
+       
+      <p class="govuk-body">Message to Sarah Phillips sent on <span id="date-today"></span></p>
+        
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible custom-hr" aria-hidden="true">
+      
+
+      <p class="govuk-body">Your reference number: AC222222A  </p>
+      <p class="govuk-body">Thank you for asking for a copy of your PIP Statement of Entitlement.</p> 
+      <p class="govuk-body">You have been awarded PIP as follows:</p> 
+      <p class="govuk-body">The standard rate of the mobility component from 2 May 2020 to 2 December 2029.</p> 
+      <p class="govuk-body">The enhanced rate of the daily living component from and including 6 June 2019 for an indefinite period.</p> 
+      <p class="govuk-body">As you have been awarded PIP you may be able to get other benefits and services. You can use this message as evidence that you have been awarded PIP.</p>
+      <p class="govuk-body">Find out more information about <a href="#" class="https://www.gov.uk/">financial help</a> you may be able to get.</p> 
+      
+      <h2 class="govuk-heading-m">Download a copy</h2>
+
+      <p class="govuk-body govuk-!-font-weight-bold">
+          <img src="/public/images/download-icon.svg" alt="sDownload icon" class="govuk-icon" aria-hidden="true"> <a href="#" class="govuk-link govuk-link--no-visited-state">Download your statement of entitlement (PDF, 4.2KB)</a>
+      </p>
+     
+      <h2 class="govuk-heading-m" id="contact-us">Contact us</h2>
+      <p class="govuk-body">You can contact us by telephone on 0800 555 0001 or textphone on 0800 555 0002.</p> 
+      
+      <h2 class="govuk-heading-m">Reporting change of circumstances</h2>
+      <p class="govuk-body">You must contact us if your circumstances change as they could affect your benefits. You can find out what you need to let us know in <a href="#next-steps-and-support" class="govuk-link--no-visited-state">next steps and support</a></p> 
+  
+
+
+      <br>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h2 class="govuk-heading-l" id="next-steps-and-support">Next steps and support</h2>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Changes in circumstances
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">Please tell us straight away if you:</p> 
+
+            <ul class="govuk-body"> 
+              <li>the help you need or your condition changes, for example you need more or less help with daily living and mobility tasks</li>
+              <li>your health professional tells you your condition will last for a longer or shorter time than you have already told us</li>
+              <li>your condition has worsened, and you are not expected to live more than 12 months</li>
+            </ul>
+          
+            <p class="govuk-body">Find out more on how to <a href="#" class="https://www.gov.uk/">report a change to your needs or circumstances.</a></p>
+
+            <h4 class="govuk-heading-s">Other changes you must tell us about</h4>
+
+            <p class="govuk-body">Please tell us straight away if:</p> 
+
+            <ul class="govuk-body"> 
+              <li>are not a British or Irish citizen and your immigration status changes. If you are a European Union, European Economic Area or Swiss citizen and were living in the UK by 31 December 2020 but have not applied to the EU Settlement Scheme, you and your family must apply straight away. If you have lived in the UK for 5 years or more in a row, you can apply for settled status. If you have pre-settled status this will not expire. It may be beneficial for you to apply for settled status if you have lived in the UK for 5 years or more in a row</li>
+              <li>go into a hospital, hospice, nursing home or care home</li>
+              <li>go into a residential school or college</li>
+              <li>go into foster care, or the care of a local authority or health and social care trust</li>
+              <li>plan to leave the country for more than 4 weeks</li>
+              <li>go into prison or are held in legal custody</li>
+              <li>or your spouse, civil partner or parent you are dependent upon, start to or stop receiving a pension or benefit from another EEA state or Switzerland</li>
+            </ul>
+
+            <p class="govuk-body">Changes can affect the amount of PIP you get. Depending on the change your PIP could go up, go down, stay the same or stop.</p>
+
+            <p class="govuk-body">If we overpay you because you have not told us about a change, you may have to pay the money back.</p> 
+
+            <p class="govuk-body">If you do not tell us about any changes straight away, you risk being prosecuted or having to face a financial penalty.</p> 
+
+            <p class="govuk-body">Please tell us straight away if:</p> 
+
+            <ul class="govuk-body"> 
+              <li>change your name, address or landline or mobile phone number</li>
+              <li>change the account that we pay your benefit into</li>
+              <li>change doctor or health professional</li>
+              <li>have someone acting for you and that person changes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Other benefits, support and advice
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">There are other benefits and help you may be able to get. For example:</p> 
+
+            <ul class="govuk-body"> 
+              <li>Access to work</li>
+              <li>Employment and Support Allowance</li>
+              <li>Universal Credit</li>
+              <li>Housing Benefit or Local Council Tax Reduction</li>
+              <li>Help with health costs (please go to your local NHS website for more details)</li>
+              <li>A motability vehicle (this is dependent on getting the enhanced amount of mobility)</li>
+              <li>Disabled Persons Railcard and Blue Badge</li>
+            </ul>
+
+            <p class="govuk-body">If you are awarded the enhanced or standard mobility part of Personal Independence Payment you may be entitled to an exemption or reduction of Vehicle Excise Duty (VED).</p>
+            <p class="govuk-body">Find out what financial help is available for <a href="#" class="https://www.gov.uk/">vehicles and transport</a> or contact DVLA on 0300 790 6802.</p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                We have many different ways we can communicate with you
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">If you would like Braille, British Sign Language, a hearing loop, translations, large print or something else please tell us using the phone number in the <a href="#contact-us" class="govuk-link--no-visited-state">Contact us</a> section.</p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Treating people fairly
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">We treat people fairly, regardless of their disability, ethnicity, gender, sexual orientation, transgender status, marital or civil partnership status, age, religion or beliefs.</p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Call charges
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">Calls to 0800 numbers are free from personal mobiles and landlines.</p>
+          </div>
+        </div>
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h3 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Why DWP needs personal information and how we treat it
+              </span>
+            </h3>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+            <p class="govuk-body">We treat personal information carefully. We may use it for any of our purposes. To learn more about information rights and how we use information, please visit our <a href="#" class="https://www.gov.uk/">DWP Personal Information Charter.</a></p>
+            <p class="govuk-body">If you have included another adult's personal information in your claim you should let them know. They can find information about why and how DWP uses personal information in our <a href="#" class="https://www.gov.uk/">DWP Personal Information Charter.</a></p>
+
+            <p class="govuk-body">If you are awarded the enhanced or standard mobility part of Personal Independence Payment you may be entitled to an exemption or reduction of Vehicle Excise Duty (VED).</p>
+            <p class="govuk-body">Find out what financial help is available for <a href="#" class="https://www.gov.uk/">vehicles and transport</a> or contact DVLA on 0300 790 6802.</p>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+
+
+  <style>
+    /* Line thickness */
+    .custom-hr {
+      border: none;
+      height: 6px; 
+      background-color: #28a197;
+    }
+
+    /* Icon formatting */
+    .govuk-icon {
+      color: #1d70b8;
+      vertical-align: middle;
+    }
+  </style>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+
+    const navType = performance.getEntriesByType('navigation')[0]?.type;
+    if (navType === 'reload') {
+      localStorage.clear();
+    }
+
+    const today = new Date ();
+    const formattedDate = today.toLocaleDateString('en-GB', {
+
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+
+    });
+
+    const dateColumns = document.querySelectorAll('.date-today');
+    dateColumns.forEach(column => {
+    column.textContent = formattedDate;
+
+    });
+
+    document.getElementById('date-today').textContent = formattedDate;
+
+    });
+  </script>
+
+{% endblock %}
+
+

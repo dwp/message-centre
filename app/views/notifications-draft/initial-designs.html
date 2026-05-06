@@ -1,0 +1,205 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">February 2025</span>
+        Initial designs
+      </h1>
+
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m">
+  Read your notification
+  </h2>
+
+  <div class="width-container govuk-!-padding-4" style="border-radius:10px; background-color:#f3f2f1">
+    <div class="govuk-!-padding-bottom-2"></div>
+
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML notification type 1</th>
+          <td class="govuk-table__cell">Basic notification with a 'Get help' feature</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/1.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML notification type 2</th>
+          <td class="govuk-table__cell">Basic notification type used in Round 1</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/2.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML notification type 3</th>
+          <td class="govuk-table__cell">Adds in additional example content provided by architecture into a two thirds column</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/3.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML notification type 4</th>
+          <td class="govuk-table__cell">Splits into example content provided by architecture into a two thirds column and a one third column</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/4.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML notification type 5</th>
+          <td class="govuk-table__cell">Breaks up the additional content within a grey container</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/5.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML notification type 6</th>
+          <td class="govuk-table__cell">Adds in the example content via a 'Additional information (opens in new tab)' link</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/6.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML notification type 7</th>
+          <td class="govuk-table__cell">Adds repetative content to right hand column in a grey container</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/7.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Email</th>
+          <td class="govuk-table__cell">What an email could look like</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/email.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Text message</th>
+          <td class="govuk-table__cell">What a text message could look like</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/text-message.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Proof of benefit letter</th>
+          <td class="govuk-table__cell">Proof of benefit letter</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/proof-of-benefit.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+  
+</table>
+</div>
+
+<div class="govuk-!-padding-bottom-8"></div>
+
+<h2 class="govuk-heading-m">
+  HTML structure experiments
+  </h2>
+
+  <div class="width-container govuk-!-padding-4" style="border-radius:10px; background-color:#f3f2f1">
+    <div class="govuk-!-padding-bottom-2"></div>
+
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+          <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML</th>
+          <td class="govuk-table__cell">Raw HTML</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/test-html.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML 1</th>
+          <td class="govuk-table__cell">Removing features like <b>style="font-size: 12px;"</b> and <b>strong</b></td>
+        <td class="govuk-table__cell"><a href="ideas/messages/test-html-1.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML 2</th>
+          <td class="govuk-table__cell">Adding in GDS code like <b>h2 class="govuk-heading-m"</b></td>
+        <td class="govuk-table__cell"><a href="ideas/messages/test-html-2.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML 3</th>
+          <td class="govuk-table__cell">Adding code into a <b>govuk-grid-column-two-thirds</b> container</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/test-html-3.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML 4</th>
+          <td class="govuk-table__cell">Adding code into a <b>govuk-grid-column-two-thirds</b> and <b>govuk-grid-column-one-third</b> container</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/test-html-4.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">HTML 5</th>
+          <td class="govuk-table__cell">Adding in a DWP logo</td>
+        <td class="govuk-table__cell"><a href="ideas/messages/test-html-5.html" class="govuk-link">View</a></td>
+        </tr>
+      </tbody>
+
+
+
+  
+</table>
+</div>
+
+</div>
+
+
+
+
+{% endblock %}

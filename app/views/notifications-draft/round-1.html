@@ -1,0 +1,170 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        <span class="govuk-caption-m">March 25</span>
+        Round 1 UR
+      </h1>
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m">
+    Round 1 - Your notifications - Remote sessions
+    </h2>
+
+    <div class="width-container govuk-!-padding-4" style="border-radius:10px; background-color:#f3f2f1">
+      <div class="govuk-!-padding-bottom-2"></div>
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">6</th>
+            <td class="govuk-table__cell">Incorporates 'Due date by 'Day Month Year'' section into design 7.</td>
+          <td class="govuk-table__cell"><a href="ideas/6.html" class="govuk-link">View</a></td>
+          </tr>
+        </tbody>
+          
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">7</th>
+            <td class="govuk-table__cell">Iteration of design 4 from the Job Centre visits.</td>
+          <td class="govuk-table__cell"><a href="ideas/7/tiles.html" class="govuk-link">View</a></td>
+          </tr>
+        </tbody>
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">8</th>
+            <td class="govuk-table__cell">Splits design 7 into two tables, one for Read and one for Unread notifitications, with tags.</td>
+          <td class="govuk-table__cell"><a href="ideas/8.html" class="govuk-link">View</a></td>
+          </tr>
+        </tbody>
+
+      </tbody>
+
+      
+    </tbody>
+    
+
+
+
+  
+</table>
+</div>
+
+
+  
+
+  <div class="govuk-!-padding-bottom-9"></div>
+
+  <h2 class="govuk-heading-m">
+    Round 1 - Your notifications - March Job Centre
+    </h2>
+
+    <div class="width-container govuk-!-padding-4" style="border-radius:10px; background-color:#f3f2f1">
+      <div class="govuk-!-padding-bottom-2"></div>
+
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">Name</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Description</th>
+            <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">1</th>
+            <td class="govuk-table__cell">The use of a simple <a href="https://design-system.service.gov.uk/components/table/" class="govuk-link">Table</a> format to highlight notifications.</td>
+          <td class="govuk-table__cell"><a href="ideas/1.html" class="govuk-link">View</a></td>
+          </tr>
+          
+        </tbody>
+          
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">2</th>
+            <td class="govuk-table__cell">Benefit notifications are separates by a holding-screen.</td>
+          <td class="govuk-table__cell"><a href="ideas/2/tiles.html" class="govuk-link">View</a></td>
+          </tr>
+          
+        </tbody>
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">3</th>
+            <td class="govuk-table__cell">Separates each notification by notification-type.</td>
+          <td class="govuk-table__cell"><a href="ideas/3/tiles.html" class="govuk-link">View</a></td>
+          </tr>
+          
+        </tbody>
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">4</th>
+            <td class="govuk-table__cell">Detailed wishlist of several features we have hypothesised are needed.</td>
+          <td class="govuk-table__cell"><a href="ideas/4.html" class="govuk-link">View</a></td>
+          </tr>
+          
+        </tbody>
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">5</th>
+            <td class="govuk-table__cell">Iterations from first Job Centre visit.</td>
+          <td class="govuk-table__cell"><a href="ideas/5.html" class="govuk-link">View</a></td>
+          </tr>
+          
+        </tbody>
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Bonus</th>
+            <td class="govuk-table__cell">Separates each notification by benefit.</td>
+          <td class="govuk-table__cell"><a href="ideas/bonus.html" class="govuk-link">View</a></td>
+          </tr>
+          
+        </tbody>
+    
+      </tbody>
+
+      
+    </tbody>
+    
+
+
+
+  
+</table>
+</div>
+</div>
+
+
+
+
+{% endblock %}

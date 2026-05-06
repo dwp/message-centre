@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+
+
+  {{ govukOneLoginServiceHeader({
+    homepageLink: "/index.html",
+    signOutLink: " ",
+    oneLoginLink: " ",
+    
+    serviceNavigationParams: { 
+      
+      serviceName: "View your letters messages",
+      navigationLabel: "inbox.html"
+      
+    }
+  }) }}
+
+
+{% endblock %}
+
+{% block pageTitle %}
+  View your letters and messages
+{% endblock %}
+
+{% block beforeContent %}
+  <ul class="dwp-language-toggle__list">
+    <li class="dwp-language-toggle__list-item" aria-current="true"> <span class="govuk-body-s"> English  </span></li>
+    <li class="dwp-language-toggle__list-item">    
+    <a href="#" hreflang="cy" lang="cy" rel="alternate" class="govuk-link--no-visited-state" aria-label="Newid yr iaith ir Gymraeg">Cymraeg</a>
+    </li>
+  </ul>
+{% endblock %}
+
+
+{% block content %}
+
+  <h1 class="govuk-heading-xl">View your letters and messages</h1>
+
+  <p class="govuk-body-l" id="unread-count">
+    You have 0 messages
+  </p>
+
+  <br>
+
+  {{ govukButton({
+      text: "Go back to account home",
+      href: " ",
+      classes: "govuk-button"
+      }) }}
+
+
+  <style>
+    .govuk-service-navigation__wrapper {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 960px) {
+      .sidebar {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .leftside {
+        width: 100%;
+        margin-left: 40px;
+      }
+    }
+
+    .govuk-table__cell {
+      padding-top: 18px;
+      padding-bottom: 20px;
+      font-weight: normal !important;
+    }
+
+    .govuk-table__header {
+      padding-top: 18px;
+      padding-bottom: 20px;
+    }
+
+    .custom-unread-tag {
+      background-color: #1d70b8;
+      color: white;
+    }
+
+    .custom-read-tag {
+      background-color: #e5e6e7;
+      color: #282d30;
+    }
+
+    .govuk-table__row.unread {
+      background-color: #f3f2f1;
+    }
+
+    .govuk-table__row.read {
+      background-color: transparent;
+    }
+  </style>
+
+
+
+{% endblock %}
+
