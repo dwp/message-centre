@@ -10,7 +10,7 @@
     
     serviceNavigationParams: { 
       
-      serviceName: "View your letters messages",
+      serviceName: "View your letters and messages",
       navigationLabel: "inbox.html"
       
     }
@@ -57,7 +57,7 @@
             <strong class="govuk-tag custom-unread-tag">Unread</strong>
           </td>
           <td class="govuk-table__cell">
-            <a href="message-pip" class="govuk-link message-link" data-id="pip-unread">
+            <a href="HTML-message-PIP-example" class="govuk-link" data-id="pip-unread">
               Personal Independence Payment (PIP)<br>
               Proof of benefit
             </a>
@@ -70,7 +70,7 @@
             <strong class="govuk-tag custom-unread-tag">Unread</strong>
           </td>
           <td class="govuk-table__cell">
-            <a href="message-esa" class="govuk-link message-link" data-id="esa-unread">
+            <a href=" " class="govuk-link" data-id="esa-unread">
               Employment and Support Allowance (ESA)<br>
               Proof of benefit
             </a>
@@ -85,7 +85,7 @@
 
   {{ govukButton({
       text: "Go back to account home",
-      href: "account-home",
+      href: " ",
       classes: "govuk-button"
       }) }}
 
@@ -127,39 +127,54 @@
   </style>
 
 
- <script>
-  document.addEventListener('DOMContentLoaded', function () {
+<script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+
     const navType = performance.getEntriesByType('navigation')[0]?.type;
     if (navType === 'reload') {
       localStorage.clear();
     }
 
-    const today = new Date();
+    const today = new Date ();
     const formattedDate = today.toLocaleDateString('en-GB', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
+
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+
     });
 
-    const oldDate = new Date();
-    oldDate.setMonth(oldDate.getMonth() - 2);
+    const dateColumns = document.querySelectorAll('.date-column');
+    dateColumns.forEach(column => {
+    column.textContent = formattedDate;
 
-    const formattedOldDate = oldDate.toLocaleDateString('en-GB', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
     });
 
-    document.querySelectorAll('.date-column').forEach(function (column) {
-      column.textContent = formattedDate;
+    document.getElementById('date-column').textContent = formattedDate;
+
     });
 
-    document.querySelectorAll('.old-date-column').forEach(function (column) {
-      column.textContent = formattedOldDate;
-    });
 
-      });
-</script>
+    window.addEventListener('pageshow', function () {
+      document.querySelectorAll('.govuk-link').forEach(function (link) {
+        const id = link.getAttribute('data-id');
+        const row = document.querySelector(`tr[data-id="${id}"]`);
+        const statusCell = row.querySelector('[data-status]');
+
+        if (localStorage.getItem(id) === 'read') {
+            row.classList.remove('unread');
+            row.classList.add('read');
+              statusCell.setAttribute('data-status', 'read');
+              statusCell.innerHTML = '<strong class="govuk-tag govuk-tag--grey">Read</strong>';
+            }
+
+        link.addEventListener('click', function () {
+          localStorage.setItem(id, 'read');
+            });
+          });
+        });
+  </script>
 
 
 

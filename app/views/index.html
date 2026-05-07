@@ -1,5 +1,24 @@
 {% extends "layouts/main.html" %}
 
+{% block header %}
+
+
+  {{ govukOneLoginServiceHeader({
+    homepageLink: "/index.html",
+    signOutLink: " ",
+    oneLoginLink: " ",
+    
+    serviceNavigationParams: { 
+      
+      serviceName: "View your letters and messages",
+      navigationLabel: "inbox.html"
+      
+    }
+  }) }}
+
+
+{% endblock %}
+
 {% set pageName="Home" %}
 
 {% block beforeContent %}
@@ -13,10 +32,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-width-container">
     <h1 class="govuk-heading-l">
-      Message Centre Prototypee
+      Message Centre Prototype
     </h1>
 
-    <p class="govuk-body"> Messagee Centre is a secure, centralised hub for official benefit communications, located within Customer Account and is being designed and delivered by CCAMS. It will support channel shift from paper to digital and for MVP it will host Proof of Benefit communications, with additional communications added over time as the service expands.</p>  
+    <p class="govuk-body"> Message Centre is a secure, centralised hub for official benefit communications, located within Customer Account and is being designed and delivered by CCAMS. It will support channel shift from paper to digital and for MVP it will host Proof of Benefit communications, with additional communications added over time as the service expands.</p>  
 
     <br>
 
@@ -26,7 +45,7 @@
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-              Version 9 <strong class="govuk-tag govuk-tag--yellow"> WIP </strong>
+              Version 9 <strong class="govuk-tag">Current</strong>
             </span>
           </h2>
           <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
@@ -34,7 +53,7 @@
           </div>
         </div>
         <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-          <p class="govuk-body"> Design changes, informed by E2E testing in April 26, for both Customer Account and Message Centre designs are captured in this prototype and were handed over to relevants BAs across both teams for ticketing and delivery on May 6th.​​</p>          
+          <p class="govuk-body"> Design changes, informed by E2E testing in April 26, for Message Centre designs are captured in this prototype and were handed over to BAs for ticketing and delivery on May 8th.​​</p>          
           
           <table class="govuk-table">
             <thead class="govuk-table__head">
@@ -47,21 +66,28 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">HTML message template</th>
-                <td class="govuk-table__cell"><a href=" " class="govuk-link">View design</a></td>
+                <td class="govuk-table__cell"><a href="/version-9/html-message-template" class="govuk-link">View design</a></td>
+              </tr>
+            </tbody>
+
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">HTML message PIP example</th>
+                <td class="govuk-table__cell"><a href="/version-9/html-message-PIP-example" class="govuk-link">View design</a></td>
               </tr>
             </tbody>
 
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Inbox</th>
-                <td class="govuk-table__cell"><a href=" " class="govuk-link">View design</a></td>
+                <td class="govuk-table__cell"><a href="/version-9/inbox" class="govuk-link">View design</a></td>
               </tr>
             </tbody>
 
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header">Empty inbox</th>
-                <td class="govuk-table__cell"><a href=" " class="govuk-link">View design</a></td>
+                <td class="govuk-table__cell"><a href="/version-9/inbox-empty" class="govuk-link">View design</a></td>
               </tr>
             </tbody>
 
@@ -73,7 +99,7 @@
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-              Version 8 <strong class="govuk-tag">Current</strong>
+              Version 8
             </span>
           </h2>
           <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
@@ -311,9 +337,9 @@
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
-    <h1 class="govuk-heading-l">
+    <h2 class="govuk-heading-l">
         Related prototypes
-      </h1>
+      </h2>
       
       <ul class="govuk-list">
         <li>

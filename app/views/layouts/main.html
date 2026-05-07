@@ -4,3 +4,24 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% block footer %}
+  {{ govukFooter({
+    meta: {
+      items: [
+        {
+            href: " ",
+            text: "Accessibility statement"
+            },
+        {
+          href: "https://dev.manage-benefits-state-pension.service.dwp.gov.uk/start-proof-benefits-state-pension/cookies",
+          text: "Cookies"
+        },
+        {
+          href: "https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter",
+          text: "Privacy"
+        }
+      ]
+    }
+  }) }}
+{% endblock %}

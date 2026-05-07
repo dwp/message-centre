@@ -10,7 +10,7 @@
     
     serviceNavigationParams: { 
       
-      serviceName: "View your letters messages",
+      serviceName: "View your letters and messages",
       navigationLabel: "inbox.html"
       
     }
@@ -27,7 +27,7 @@ Your statement of entitlement
 {% block beforeContent %}
   {{ govukBackLink({
       text: "Back",
-      href: "inbox"
+      href: "javascript:window.history.back()"
   }) }}
   
   <ul class="dwp-language-toggle__list">
@@ -39,7 +39,6 @@ Your statement of entitlement
 
   <div class="govuk-inset-text">
         <h2 class="govuk-heading-m">If you need this message as a letter, you can download a copy.</h2>
-        <p class="govuk-body">This includes your address.</p>
         <a class="govuk-link govuk-link--no-visited-state" download="PIP_Letter2" href="/public/files/PIP_Letter2.pdf">Download your {Letter title} (PDF, {Docsize}KB)</a>
       </div>
 {% endblock %}
@@ -57,7 +56,7 @@ Your statement of entitlement
         </div>
 
 
-      <span class="govuk-caption-l">{messageCentreBenefit} ({Acronym of messageCentreBenefit}) </span>
+      <span class="govuk-caption-l">{messageCentreBenefit} ({Acronym of messageCentreBenefit})</span>
       <h1 class="govuk-heading-l">{Letter title}</h1>
 
       <p class="govuk-body">Message to {Customer} sent on {Date}</p>
@@ -92,7 +91,7 @@ Your statement of entitlement
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
       <h2 class="govuk-heading-l" id="next-steps-and-support">More information</h2>
-      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-more-information">
        
         <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
@@ -110,53 +109,16 @@ Your statement of entitlement
         <div class="govuk-accordion__section">
           <div class="govuk-accordion__section-header">
             <h3 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                Other ways to communicate with us
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                {Secondary content section header}
               </span>
             </h3>
           </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p class="govuk-body">{Section content}</p>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+            <p class="govuk-body">{Section content}</p> 
+          </div>
         </div>
 
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h3 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                Treating people fairly
-              </span>
-            </h3>
-          </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p class="govuk-body">{Section content}</p>
-          </div>
-        </div> 
-        
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h3 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                Call charges
-              </span>
-            </h3>
-          </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p class="govuk-body">{Section content}</p> 
-          </div>
-        </div> 
-
-        <div class="govuk-accordion__section">
-          <div class="govuk-accordion__section-header">
-            <h3 class="govuk-accordion__section-heading">
-              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                Why DWP needs personal information and how we treat it
-              </span>
-            </h3>
-          </div>
-          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-            <p class="govuk-body">{Section content}</p> 
-          </div>
-        </div> 
       </div>
     </div>
   </div>
