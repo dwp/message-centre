@@ -6,4 +6,12 @@
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
 
-// Add your routes here
+
+
+// Routes for E2E testing
+const POBRoutes = require('./routes/POB')
+
+router.use('/', POBRoutes)
+
+module.exports = router
+
