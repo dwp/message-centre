@@ -1,16 +1,41 @@
 {% extends "layouts/main.html" %}
 
-{% block pageTitle %}
-My notifications
+{% block header %}
+
+
+  {{ govukOneLoginServiceHeader({
+    homepageLink: "/index.html",
+    signOutLink: " ",
+    oneLoginLink: " ",
+    
+    serviceNavigationParams: { 
+      
+      serviceName: "View your letters and messages",
+      navigationLabel: "inbox.html"
+      
+    }
+  }) }}
+
+
 {% endblock %}
 
+{% block pageTitle %}
+  View your letters and messages
+{% endblock %}
 
 {% block beforeContent %}
+  <ul class="dwp-language-toggle__list">
+    <li class="dwp-language-toggle__list-item" aria-current="true"> <span class="govuk-body-s"> English  </span></li>
+    <li class="dwp-language-toggle__list-item">    
+    <a href="#" hreflang="cy" lang="cy" rel="alternate" class="govuk-link--no-visited-state" aria-label="Newid yr iaith ir Gymraeg">Cymraeg</a>
+    </li>
+  </ul>
 
-{% include "preferences/breadcrumbs/customer-view/when-we-speak-to-you.html" %}
-
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
 {% endblock %}
-
 {% block content %}
 
 <div class="govuk-width-container">
