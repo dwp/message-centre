@@ -3,17 +3,12 @@
 {% block header %}
 
 
-  {{ govukOneLoginServiceHeader({
-    homepageLink: "/index.html",
-    signOutLink: " ",
-    oneLoginLink: " ",
-    
-    serviceNavigationParams: { 
-      
-      serviceName: "View your letters and messages",
-      navigationLabel: "inbox.html"
-      
-    }
+{{ govukOneLoginServiceHeader({
+  signOutLink: " "}) }}
+
+  {{ govukServiceNavigation({
+    serviceName: "View your letters and messages",
+    serviceUrl: "/index"
   }) }}
 
 
